@@ -1,0 +1,3 @@
+ Line Count  Word Count  File Name
+   2876173  505766304  unverified.txt
+   231527   44877462   verified.txt

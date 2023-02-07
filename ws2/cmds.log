@@ -1,0 +1,30 @@
+  408  git push -u origin main
+  409  cd ws2
+  410  ls
+  411  mkdir ws2
+  412  wget https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  413  gzip -d amazon_reviews_us_Books_v1_02.tsv.gz
+  414  ls
+  415  rm amazon_reviews_us_Books_v1_02.tsv
+  416  cd ws2
+  417  wget amazon_reviews_us_Books_v1_02.tsv.gz
+  418  wget https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  419  gzip -d amazon_reviews_us_Books_v1_02.tsv.gz
+  420  ls
+  421  grep -E 'Y' amazon_reviews_us_Books_v1_02.tsv
+  422  grep -E ' Y ' amazon_reviews_us_Books_v1_02.tsv
+  423  grep '[[:space:]]Y[[:space:]]' amazon_reviews_us_Books_v1_02.tsv
+  424  grep '[[:space:]]Y[[:space:]]' amazon_reviews_us_Books_v1_02.tsv > verified.txt
+  425  grep '[[:space:]]N[[:space:]]N' amazon_reviews_us_Books_v1_02.tsv
+  426  grep '[[:space:]]N[[:space:]]N' amazon_reviews_us_Books_v1_02.tsv > unverified.txt
+  427  ls
+  428  wc -l -w unverified.txt
+  429  wc -l -w verified.txt
+  430  wc -l -w unverified.txt > counts.txt
+  431  wc -l -w verified.txt >> counts.txt
+  432  cat counts.txt
+  433  vim counts.txt
+  434  cat counts.txt
+  435  history 20 > cmds.log
+  436  cat cmds.log
+  437  history 30 > cmds.log
