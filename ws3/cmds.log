@@ -1,0 +1,32 @@
+  559  cd cs131
+  560  ls
+  561  mkdir ws3
+  562  ls
+  563  cd ws3
+  564  cd cs131
+  565  cd ws3
+  566  cat testfile.tsv
+  567  cut -f 2 testfile.tsv > customer_id.txt
+  568  sort customer_id.txt | uniq -c
+  569  sort customer_id.txt | uniq -c | sort -nr
+  570  sort customer_id.txt | uniq -c | sort -nr > mostcustomerreviews.txt
+  571  head mostcustomerreviews.txt
+  572  head mostcustomerreviews.txt > top3customers.txt
+  573  cat top3customers.txt
+  574  vi top3customers.txt
+  575  cat top3customers.txt
+  576  head testfile.tsv
+  577  cut -f 6 testfile.tsv > productnames.txt
+  578  head productnames.txt
+  579  sort productnames.txt | uniq -c | sort -nr > sortedproducts.txt
+  580  head sortedproducts.txt
+  581  head sortedproducts.txt > top3products.txt
+  582  vi top3products.txt
+  583  cat top3products.txt
+  584  ls
+  585  top3customers.txt > ws3.txt
+  586  cat top3customers.txt > ws3.txt
+  587  cat top3products.txt >> ws3.txt
+  588  cat ws3.txt
+  589  vi ws3.txt
+  590  history 40 > cmds.log
