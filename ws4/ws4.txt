@@ -1,0 +1,21 @@
+Script started on 2023-02-25 02:05:28-05:00
+
+bash-4.4$ l
+total 8
+drwxrwxr-x 7 kevin23sp kevin23sp 4096 Feb 25 02:05 ..
+-rw-rw-r-- 1 kevin23sp kevin23sp    0 Feb 25 02:05 ws4.txt
+drwxrwxr-x 2 kevin23sp kevin23sp 4096 Feb 25 02:05 .
+
+
+bash-4.4$ w
+      4      29     174
+
+bash-4.4$ exit
+
+Script done on 2023-02-25 02:05:33-05:00
+
+Average Customer ID: 52615377
+28.0863
+
+Average Product ID: 315416156 
+8.01024

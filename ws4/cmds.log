@@ -1,0 +1,27 @@
+  674  ls
+  675  vi ~/.bashrc
+  676  ls
+  677  cd cs131
+  678  mkdir ws4
+  679  cd ws4
+  680  script ws4.txt
+  681  wget https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  682  gzip -d amazon_reviews_us_Books_v1_02.tsv.gz
+  683  mkdir CUSTOMERS
+  684  mkdir PRODUCTS
+  686  grep -w "52615377" amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >> ~/cs131/ws4/CUSTOMERS/52615377.txt
+  687  ls
+  688  cd CUSTOMERS
+  689  ls
+  690  cat 52615377.txt
+  692  cd -
+  693  grep -w "315416156" amazon_reviews_us_Books_v1_02.tsv | cut -f 9 > ~/cs131/ws4/PRODUCTS/315416156.txt
+  694  cd PRODUCTS
+  695  ls
+  696  cat 315416156.txt
+  697  cd -
+  701  awk '{ total += $1 } END { print total/NR }' ~/cs131/ws4/CUSTOMERS/52615377.txt >> ws4.txt
+  702  cat ws4.txt
+  703  awk '{ total += $1 } END { print total/NR }' ~/cs131/ws4/PRODUCTS/315416156.txt >> ws4.txt
+  704  cat ws4.txt
+  707  history > cmds.log 50
