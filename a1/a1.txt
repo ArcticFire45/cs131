@@ -1,0 +1,40 @@
+2. Home Directory Path: /mnt/scratch/kevin23sp
+	commands: $ cd,  pwd 
+
+3. UID: kevin23sp         Groups: kevin23sp
+	commands: $ whoami, groups
+
+4. Remove Execute Permission: chmod u-rwx
+Cannot cd into that directory, can't "ls", "ls-l", or create files in temp
+
+5. Yes you can use "mv" to move the directory to "temp3", you are also allowed to "cp" between directories
+	command: $ cp -R {source directory} {target directory} 
+
+6. Memory File: meminfo
+   CPU File: cpuinfo
+
+7. Total Memory: 73080640 kB
+
+8. Processor Count: 256
+   Processor Architecture Name: POWER8 (power series)
+   Processor Speed: 3.525GHz
+   
+9. File Size: 7.5M bytes = 0.0075GB
+	110350 lines	
+
+10. 57 hashtags contain "great" (case-insensitive)
+
+11. text/plain; charset=utf-8
+
+12. iconv -f utf-8 -t ascii a1
+
+13. Unique Users
+    177 
+
+Unique Tweets
+  64698 
+
+Unique Hashtags:
+  20258  
+
+There were less unique hashtags than unique tweets

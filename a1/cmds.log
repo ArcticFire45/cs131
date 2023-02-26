@@ -1,0 +1,118 @@
+QUESTION 1
+
+  771  cd cs131
+  772  mkdir a1
+  773  ls
+  774  cd a1
+ 
+
+QUESTION 2
+  777  cd ~
+  778  cd
+  779  pwd
+  780  cd cs131
+  781  cd a1
+  782  pwd
+  783  vi a1.txt
+
+
+QUESTION 3
+  784  whoami
+  785  groups
+  786  cd
+  791  vi a1.txt
+
+
+QUESTION 4
+  792  mkdir temp
+  793  man chmod
+  794  chmod u-rwx temp
+  795  cd temp
+  796  ls temp
+  801  vi a1.txt
+
+
+QUESTION 5
+  811  mkdir temp2
+  812  mv temp2 temp3
+  813  ls
+  814  cp -R temp3 temp2
+  815  ls
+  816  vi a1.txt
+
+
+QUESTION 6
+  817  ls /proc/
+  822  ls
+  823  cd meminfo
+  824  cat meminfo
+  825  vi a1.txt
+  826  cd cs131/a1
+  827  cd
+  828  cd cs131/a1
+  829  vi a1.txt
+
+QUESTION 7
+  830  ls /proc/meminfo | head
+  831  head | ls /proc/meminfo
+  832  ls /proc
+  833  ls /proc | cat meminfo
+  834  ls /proc/meminfo 
+  835  head /proc/meminfo
+  836  vi a1.txt
+
+
+QUESTION 8
+  837  head /proc/cpuinfo
+  838  tail /proc/cpuinfo	
+  839  cat /proc/cpuinfo
+  840  vi a1.txt
+
+
+QUESTION 9
+  883  cp /home/test/A1/downloaded_hashtags_extend.csv a1
+  884  ls
+  885  cat a1
+  890  ls -l a1
+  891  ls -s 
+  892  ls -sh
+  893  ls -lh
+  894  du -h a1
+  895  ls -lh a1
+  895  wc -l a1
+  896  vi a1.txt
+
+
+QUESTION 10
+  897  grep -i a1 | wc -l
+  898  grep -i "great" a1 | wc -l
+  899  grep -i "great" a1 | wc
+  900  vi a1.txt
+
+
+QUESTION 11
+  901  file -bi a1
+  902  vi a1.txt
+
+
+QUESTION 12
+  903  iconv -f utf-8 -t ascii a1
+  904  vi a1.txt
+
+
+QUESTION 13
+  905  head a1
+  913  cut -d, -f1 a1
+  914  cut -d, -f1 a1 | sort | uniq -c | wc
+  915  cut -d, -f4 a1 | sort | uniq -c | wc
+  916  cut -d, -f2 a1 | sort | uniq -c | wc
+  917  vi a1.txt
+
+
+  918  history > cmds.log 60
+  919  cat cmds.log
+  920  ls
+  921  rm cmds.log
+  922  history > cmds.log 100
+  923  cat cmds.log
+  924  history > cmds.log 200
