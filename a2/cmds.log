@@ -1,0 +1,28 @@
+Commands
+
+ 1087  mv /home/test/A1/downloaded_tweets_extend_nolf2.tsv ~
+ 1088  mv /home/test/A1/downloaded_tweets_extend_original_nolf2.tsv ~
+ 1089  ls
+ 1090  cd cs131
+ 1091  mkdir a2
+ 1092  ls
+ 1093  cd ..
+ 1094  mv downloaded_tweets_extend_nolf2.tsv cs131/a2/downloaded_tweets_extend_nolf2.tsv
+ 1095  mv downloaded_tweets_extend_original_nolf2.tsv cs131/a2/downloaded_tweets_extend_original_nolf2.tsv
+ 1096  downloaded_tweets_extend_original_nolf2.tsv
+ 1097  cd cs131/a2
+ 1098  head grep -w "type=replied_to" downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -10
+ 1099  head downloaded_tweets_extend_original_nolf2.tsv
+ 1100  grep -w "type=replied_to" downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -10 > a2.txt
+ 1101  cat a2.txt
+ 1102  grep -w "type=replied_to" downloaded_tweets_extend_original_nolf2.tsv | cut -f 6 | sort | uniq -c | sort -nr | head -10 >> a2.txt
+ 1103  cat a2.txt
+ 1104  vim a2.txt
+ 1105  grep -w "type=replied_to" downloaded_tweets_extend_original_nolf2.tsv | cut -f 5
+ 1106  grep -w "1520167401496666112" downloaded_tweets_extend_nolf2.tsv
+ 1107  grep -w "1520167401496666112" downloaded_tweets_extend_original_nolf2.tsv
+ 1108  grep -w "type=retweeted" downloaded_tweets_extend_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -10 >> a2.txt
+ 1109  vim a2.txt
+ 1110  cut -f 4 downloaded_tweets_extend_nolf2.tsv | sort | uniq -c | sort -nr | head -31 >> a2.txt
+ 1111  vim a2.txt
+ 1112  history 30 > cmds.log
