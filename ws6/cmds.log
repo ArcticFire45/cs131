@@ -1,0 +1,26 @@
+Commands
+ 
+ 1039  cd cs131
+ 1040  rm -r ws6
+ 1041  mkdir ws6
+ 1042  cd ws6
+ 1043  wget https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+ 1044  gzip -d amazon_reviews_us_Books_v1_02.tsv.gz
+
+Task 1
+ 1045  sed '/[[:space:]]Y[[:space:]]/d' amazon_reviews_us_Books_v1_02.tsv >> unverified.txt
+ 1046  head -20 unverified.txt >> unverified_head20.txt
+ 1047  cat unverified_head20.txt
+
+Task 2
+ 1048  sed '/1844161560/! d' unverified.txt >> 1844161560.txt
+ 1049  cat 1844161560.txt
+
+Task 3
+ 1050  sed -e 's/,//g' -e 's/\.//g' -e 's/;//g' -e 's/to//g' 1844161560.txt >> 1844161560_task5.txt
+ 1051  cat 1844161560_task5.txt
+
+Task 4
+ 1052  sed -e 's/<[^>]*>//g' 1844161560.txt >> 1844161560_task6.txt
+ 1053  cat 1844161560_task6.txt
+ 1054  history 20 >> cmds.log
