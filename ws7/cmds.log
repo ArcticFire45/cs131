@@ -1,0 +1,14 @@
+ 1060  cd cs131
+ 1061  mkdir ws7
+ 1062  cd ws7
+ 1063  wget https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+ 1064  gzip -d amazon_reviews_us_Books_v1_02.tsv.gz
+ 1065  ls
+ 1066  awk -F '\t' '$12 ~ /Y/ {print $0}' amazon_reviews_us_Books_v1_02.tsv > verified.txt
+ 1067  head verified.txt
+ 1068  head -20 verified.txt > verified_head20.txt
+ 1069  cat verified_head20.txt
+ 1070  awk -F '\t' '{print $13}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -10 > top10.txt
+ 1071  cat top10.txt
+ 1072  ls
+ 1073  history 20 > cmds.log
