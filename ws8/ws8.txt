@@ -1,0 +1,8 @@
+1% sampled 
+
+[kevin23sp@sjsu ws8]$ wc -l sampled
+31056 sampled
+[kevin23sp@sjsu ws8]$ wc -l amazon_reviews_us_Books_v1_02.tsv
+3105521 amazon_reviews_us_Books_v1_02.tsv
+
+3105521 * 0.01 = 31055.21 ~= 31056

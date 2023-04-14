@@ -1,0 +1,17 @@
+ 1069  cd cs131
+ 1070  mkdir ws8
+ 1071  cd ws8
+ 1072  vim randomsample.sh
+ 1073  cat randomsample.sh
+ 1074  wget https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+ 1075  gzip -d amazon_reviews_us_Books_v1_02.tsv.gz
+ 1076  sh randomsample.sh 1 
+ 1078  sh randomsample.sh 100 amazon_reviews_us_Books_v1_02.tsv
+ 1079  sh randomsample.sh 1 amazon_reviews_us_Books_v1_02.tsv > sampled
+ 1080  wc -l sampled
+ 1081  wc -l amazon_reviews_us_Books_v1_02.tsv
+ 1082  vim ws8.txt
+ 1083  vim randomsample.sh
+ 1084  cat ws8.txt
+ 1085  vim ws8.txt
+ 1086  history 30 > cmds.log
