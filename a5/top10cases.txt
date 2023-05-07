@@ -1,0 +1,11 @@
+date,county,state,fips,cases,deaths 
+2023-03-23,Los Angeles,California,06037,3723182,35960
+2023-03-23,Miami-Dade,Florida,12086,1547142,12324
+2023-03-23,Cook,Illinois,17031,1541156,15884
+2023-03-23,Maricopa,Arizona,04013,1533874,18877
+2023-03-23,Harris,Texas,48201,1312744,11642
+2023-03-23,San Diego,California,06073,1070803,6047
+2023-03-23,Orange,California,06059,792016,8009
+2023-03-23,Riverside,California,06065,778836,8082
+2023-03-23,Broward,Florida,12011,773219,6783
+2023-03-23,San Bernardino,California,06071,746804,8171

@@ -1,0 +1,145 @@
+  760  cd cs131
+  761  mkdir a5
+  762  cd
+  763  mv covid-19-data cs131/a5/
+  764  ls
+  765  cd cs131
+  766  cd a5
+  767  ls
+
+
+#Getting most recent data for US Counties
+
+  778  grep -w "2023-03-23" covid-19-data/us-counties-2023.csv | sort -k5 -nr -t, >> acases.txt
+  779  awk -F, '!$4{next}1' acases.txt > cases.txt
+  780  cat cases.txt
+  781  wc -l cases.txt
+  787  cut -d, -f1 --complement cases.txt | head -10 > top10cases.txt
+  788  cat top10cases.txt 
+  789  head covid-19-data/us-counties-2023.csv
+
+#Sorted and saved counties with highest covid cases
+  790  sed -i '1s/^/date,county,state,fips,cases,deaths /' top10cases.txt
+  791  cat top10cases.txt 
+  792  cut -d, -f1 --complement cases.txt | head -10 > top10cases.txt
+  793  sed -i '1s/^/date,county,state,fips,cases,deaths \n/' top10cases.txt
+  794  cat top10cases.txt 
+  796  head -10 cases.txt > top10cases.txt
+  797  sed -i '1s/^/date,county,state,fips,cases,deaths \n/' top10cases.txt
+  798  cat top10cases.txt
+  801  ls
+  802  cat covid-19-data/mask-use/mask-use-by-county.csv
+
+#Adding Mask usage together so data becomes consolidated
+  803  vim maskuse.sh
+  805  awk -F, '{print $1","$2+$3+$4","$5+$6}' covid-19-data/mask-use/mask-use-by-county.csv > mask_data.txt
+  806  sed -i '1s/^/id,no_mask,yes_mask \n/' top10cases.txt
+  807  cat top10cases.txt
+  808  sed -i '1s/^/id,no_mask,yes_mask \n/' mask_data.txt
+  809  sed -i '1d' top10cases.txt 
+  810  cat top10cases.txt 
+  811  head mask_data.txt
+  812  sed -i '2d' mask_data.txt
+  813  head mask_data.txt
+
+#Sorted and saved counties with lowest covid cases
+  814  tail -10 cases.txt > last10cases.txt
+  815  cat last10cases.txt
+  816  sed -i '1s/^/date,county,state,fips,cases,deaths \n/' last10cases.txt
+  817  cat last10cases.txt 
+  818  vim maskdata.sh
+  819  ls
+  820  head mask_data.txt
+  821  vim maskdata.sh
+  822  grep -w `awk '{$4}' top10cases.txt` mask_data.txt
+  823  grep -w `awk '{print $4}' top10cases.txt` mask_data.txt
+  824  awk '{print $4}' top10cases.txt 
+  825  cat top10cases.txt 
+  836  ls
+  837  vim maskdata.sh
+  838  sh maskdata.sh
+  839  vim maskdata.sh
+
+#Saving column with county ID from counties to compare to mask data
+  840  awk '(NR>1)' last10cases.txt | awk -F, '{print $4}'
+  841  awk '(NR>1)' last10cases.txt | awk -F, '{print $4}' > last10ids.txt
+  852  awk '(NR>1)' top10cases.txt | awk -F, '{print $4}' > top10ids.txt
+
+#Run shell script to get data to plot
+  853  sh maskdata.sh
+  854  ls
+  855  cat top10data.txt
+  856  cat top10ids.txt
+  857  cat top10cases.txt
+  858  cd ..
+  859  ls
+  860  cd ..
+  861  ls
+#plottting data
+  862  cd gnuplot-5.4.6
+  863  cd src/
+  864  ls
+  865  display last10.png
+  866  display sample.svg
+  867  cd
+  868  exit
+  869  cd gnuplot-5.4.6
+  870  cd src
+  871  ls
+  872  display last10.png
+  873  exit
+  874  ls
+  875  cd cs131
+  876  cd a5
+  877  ls
+  878  cd 
+  879  cd gnuplot-5.4.6
+  880  ls
+  881  cd src
+  882  ls
+  883  cd
+  884  cd cs131/a5
+  885  ls
+  886  cat last10data.txt
+  887  ls
+  888  cat top10data.txt
+  889  cat last10cases.txt
+  890  cat last10id.txt
+  891  last10ids.txt
+  892  cat last10ids.txt
+  893  cat last10data.txt
+  894  ls
+  895  vim maskdata.sh
+  896  sh maskdata.sh
+  897  cat last10data.txt
+  898  cat top10data.txt
+  899  vim maskdata.sh
+  900  sh maskdata.sh
+  901  vim maskdata.sh
+  902  vim maskdata.sh 
+  903  cat last10cases.txt 
+  904  vim maskdata.sh 
+  905  sh maskdata.sh
+  906  vim maskdata.sh 
+  907  sh maskdata.sh
+  908  cat top10data.txt 
+  909  cat last10data.txt 
+  910  cat last10ids.txt 
+  911  ls
+  912  tail -12 cases.txt > last10cases.txt
+  913  cat last10cases.txt 
+  914  cat top10ids.txt
+  915  cat last10ids.txt 
+  916  awk -F, 'print $4' last10cases.txt 
+  917  awk -F, '{print $4}' last10cases.txt > last10ids.txt
+  918  cat last10ids.txt 
+  919  sh maskdata.sh 
+  920  cat last10data.txt
+  931  sed -i '1s/^/date,county,state,fips,cases,deaths' last10cases.txt
+  932  sed -i '1s/^/date,county,state,fips,cases,deaths \n/' last10cases.txt
+  933  cat last10cases.txt
+  934  cd
+  935  cd gnuplot-5.4.6
+  936  cd src
+  937  ls
+  938  ./gnuplot
